@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Sprites/spaceSmol.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Level/Border.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=4]
+
+[node name="MainScreen" type="Node2D"]
+
+[node name="SpaceSmol" type="TextureRect" parent="."]
+margin_left = -2500.0
+margin_top = -1800.0
+margin_right = 2500.0
+margin_bottom = 1800.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="BorderL" parent="Borders" instance=ExtResource( 3 )]
+position = Vector2( -2516, 0 )
+scale = Vector2( 1, 114 )
+
+[node name="BorderR" parent="Borders" instance=ExtResource( 3 )]
+position = Vector2( 2516, 0 )
+scale = Vector2( 1, 114 )
+
+[node name="BorderU" parent="Borders" instance=ExtResource( 3 )]
+position = Vector2( 0, -1816 )
+scale = Vector2( 158, 1 )
+
+[node name="BorderB" parent="Borders" instance=ExtResource( 3 )]
+position = Vector2( 0, 1816 )
+scale = Vector2( 158, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = -2500
+limit_top = -1800
+limit_right = 2500
+limit_bottom = 1800
+
+[node name="UserInterface" parent="." instance=ExtResource( 4 )]
+
+[editable path="Player"]
