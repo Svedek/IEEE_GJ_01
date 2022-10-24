@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 
+export var player_bullet:PackedScene
 
 export var drag:float = 0.1
 export var angular_drag:float = 0.1
