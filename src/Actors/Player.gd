@@ -15,7 +15,12 @@ var _move_force:float
 var _turn_force:float
 
 onready var _kb:KinematicBody2D = $"."
+onready var _firepoint:Node2D = $"Firepoint"
 
+
+func _ready():
+	# Make bullet parent to be populated
+	pass
 
 func _process(delta):
 	handle_input()
@@ -50,4 +55,10 @@ func handle_movement():
 	_velocity = move_and_slide(_velocity+move_vector)
 	
 func shoot():
+	var bullet = player_bullet.instance()
+	add_child_below_node
+	get_tree().get_root().add_child_below_node()
+	
+	get_parent()
+	#add_child(bullet)
 	print("shoot")
