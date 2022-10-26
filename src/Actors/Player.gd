@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends "Lifeform.gd"
 
 
 export var player_bullet:PackedScene
@@ -70,4 +70,3 @@ func shoot():
 	bullet.global_position = _firepoint.global_position
 	_bullet_parent.add_child(bullet)
 	bullet.initialize(global_rotation,_velocity)
-	print("shoot")
