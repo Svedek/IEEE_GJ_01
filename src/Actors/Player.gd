@@ -16,9 +16,21 @@ var _turn_force:float
 
 onready var _kb:KinematicBody2D = $"."
 onready var _firepoint:Node2D = $"Firepoint"
+var _bullet_parent:Node2D
 
 
 func _ready():
+	_bullet_parent = Node2D.new()
+	get_tree().get_current_scene().add_child(_bullet_parent)
+	print(get_tree())
+	print(get_tree().get_root())
+	print(get_tree().get_root().get_child(0))
+	print(get_tree().get_current_scene())
+	
+	print(_bullet_parent.get_parent())
+	add_child_below_node(get_tree().get_current_scene(),_bullet_parent)
+	
+	print(_bullet_parent.get_parent())
 	# Make bullet parent to be populated
 	pass
 
@@ -56,9 +68,8 @@ func handle_movement():
 	
 func shoot():
 	var bullet = player_bullet.instance()
-	add_child_below_node
-	get_tree().get_root().add_child_below_node()
-	
+	add_child_below_node(_bullet_parent,bullet)
+	print(bullet.get_parent())
 	get_parent()
 	#add_child(bullet)
 	print("shoot")
