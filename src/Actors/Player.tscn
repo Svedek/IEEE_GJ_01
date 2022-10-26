@@ -20,7 +20,7 @@ move_speed = 6.0
 [node name="Firepoint" type="Node2D" parent="."]
 position = Vector2( 56, 0 )
 
-[node name="Player_spr" type="Sprite" parent="."]
+[node name="PlayerSprite" type="Sprite" parent="."]
 position = Vector2( -4, 0 )
 texture = ExtResource( 1 )
 
@@ -32,3 +32,5 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 smoothing_enabled = true
+
+[node name="BulletParent" type="Node" parent="."]

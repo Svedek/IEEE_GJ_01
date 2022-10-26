@@ -2,7 +2,7 @@ extends Area2D
 
 
 export var damage:int = 1
-export var speed:float = 120
+export var speed:float = 600
 
 onready var _a = $"."
 
@@ -14,7 +14,6 @@ func initialize(rot:float, velocity:Vector2):
 	_a.rotate(rot)
 	
 	_move_vector = Vector2.RIGHT
-	_move_vector = _move_vector.rotated(_a.rotation)
 	_move_vector *= speed
 	_move_vector += velocity
 	
