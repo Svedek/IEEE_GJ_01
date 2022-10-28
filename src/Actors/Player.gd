@@ -23,6 +23,8 @@ func _ready():
 
 func _process(delta):
 	handle_input()
+
+func _physics_process(delta):
 	handle_movement()
 
 func _input(event):
@@ -47,6 +49,13 @@ func handle_movement():
 	
 	rotate(_angular_velocity)
 	_velocity = move_and_slide(_velocity+move_vector)
+	
+	#collision
+	for index in get_slide_count():
+		var collision := get_slide_collision(index)
+		var body := collision.collider
+		print("Collided with: ", body.name)
+		body.queue_free()
 	
 func shoot():
 	var bullet = player_bullet.instance()
