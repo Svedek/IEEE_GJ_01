@@ -1,6 +1,5 @@
 extends "Lifeform.gd"
 
-
 export var player_bullet:PackedScene
 
 export var drag:float = 0.1

@@ -1,0 +1,16 @@
+TODO - IEEE GJ
+
+enemies
+money
+UI
+buyable things
+art
+
+
+
+DONE
+shooting
+collision
+health
+movement
+input
