@@ -2,10 +2,19 @@ TODO - IEEE GJ
 
 enemies
 money
-UI
+bullet termination time
+enemy
+asteroid
+menu
+death screen
+pause?
+HUD:
+	Health
+	wave
+	timer
 buyable things
 art
-
+money pickups/ fly to you?
 
 
 DONE
@@ -14,3 +23,10 @@ collision
 health
 movement
 input
+
+
+
+
+
+	
+	
