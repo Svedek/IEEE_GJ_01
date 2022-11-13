@@ -1,6 +1,10 @@
 TODO - IEEE GJ
 
 enemies
+rusher
+shooter
+mercenary
+spawning
 money
 bullet termination time
 enemy
@@ -13,11 +17,15 @@ HUD:
 	wave
 	timer
 buyable things
+=======
+UI
+buyable things / upgrades
 art
 money pickups/ fly to you?
 
 
 DONE
+asteroids
 shooting
 collision
 health
