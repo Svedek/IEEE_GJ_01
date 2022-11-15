@@ -1,4 +1,4 @@
-extends "Lifeform.gd"
+extends "res://src/Actors/Lifeforms/Lifeform.gd"
 
 export var player_bullet:PackedScene
 
