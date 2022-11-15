@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Astroid.png-b8495dcffaf548a6cf0ed5f788c6f47b.stex"
+path="res://.import/rusher.png-e099aff14c9de5863c885b8c8ed1cf8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Astroid.png"
-dest_files=[ "res://.import/Astroid.png-b8495dcffaf548a6cf0ed5f788c6f47b.stex" ]
+source_file="res://Assets/Sprites/Lifeforms/rusher.png"
+dest_files=[ "res://.import/rusher.png-e099aff14c9de5863c885b8c8ed1cf8e.stex" ]
 
 [params]
 

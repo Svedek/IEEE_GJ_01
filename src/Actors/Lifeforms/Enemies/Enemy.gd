@@ -1,4 +1,4 @@
-extends "res://src/Actors/Lifeform.gd"
+extends "res://src/Actors/Lifeforms/Lifeform.gd"
 
 export var money_actor:PackedScene
 export var money:int

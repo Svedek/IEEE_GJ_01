@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rusher.png-73099996bb8ca8b02fc3ab0896c39321.stex"
+path="res://.import/player.png-7d6f28e9e8b8494df85e7c84df28fc42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/rusher.png"
-dest_files=[ "res://.import/rusher.png-73099996bb8ca8b02fc3ab0896c39321.stex" ]
+source_file="res://Assets/Sprites/Lifeforms/player.png"
+dest_files=[ "res://.import/player.png-7d6f28e9e8b8494df85e7c84df28fc42.stex" ]
 
 [params]
 

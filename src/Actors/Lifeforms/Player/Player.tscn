@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Sprites/player.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Lifeforms/player.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Lifeforms/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Player_Bullet.tscn" type="PackedScene" id=3]
 

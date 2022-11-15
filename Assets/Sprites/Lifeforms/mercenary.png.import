@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mercenary.png-438a21cc755c23edadb6ef8e6a348721.stex"
+path="res://.import/mercenary.png-5546d6200a3e62c60eb0ebee5d65214a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/mercenary.png"
-dest_files=[ "res://.import/mercenary.png-438a21cc755c23edadb6ef8e6a348721.stex" ]
+source_file="res://Assets/Sprites/Lifeforms/mercenary.png"
+dest_files=[ "res://.import/mercenary.png-5546d6200a3e62c60eb0ebee5d65214a.stex" ]
 
 [params]
 
