@@ -24,7 +24,7 @@ func _process(delta):
 	handle_input()
 
 func _physics_process(delta):
-	handle_movement()
+	handle_movement() # TODO MAKE USE DELTA
 
 func _input(event):
 	if event.is_action_pressed("shoot"):

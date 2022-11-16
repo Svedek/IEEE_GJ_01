@@ -15,3 +15,5 @@ func die() -> void:
 		# TODO SPAWN MONEY
 
 
+func move_to_point():
+	pass
