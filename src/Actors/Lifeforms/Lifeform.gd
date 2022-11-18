@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CollisionObject2D
 
 
 export var health:int = 1

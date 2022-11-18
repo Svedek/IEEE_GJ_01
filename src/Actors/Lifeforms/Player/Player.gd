@@ -47,11 +47,11 @@ func handle_movement():
 	var move_vector = Vector2(_move_force*cos(rotation), _move_force*sin(rotation))
 	
 	rotate(_angular_velocity)
-	_velocity = move_and_slide(_velocity+move_vector)
+	_velocity = _kb.move_and_slide(_velocity+move_vector)
 	
 	#collision
-	for index in get_slide_count():
-		var collision := get_slide_collision(index)
+	for index in _kb.get_slide_count():
+		var collision := _kb.get_slide_collision(index)
 		var body := collision.collider
 		print("Collided with: ", body.name)
 		body.queue_free()
