@@ -10,4 +10,6 @@ func take_damage(damage:int) -> void:
 		die()
 		
 func die() -> void:
+	self.set_collision_layer(0)
+	self.set_collision_mask(0)
 	queue_free()
