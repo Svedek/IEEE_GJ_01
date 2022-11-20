@@ -14,6 +14,10 @@ config/name="Ieee Gj"
 run/main_scene="res://src/Level/Gaming.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerInfo="*res://src/Actors/Autoloads/Player_Info.gd"
+
 [global]
 
 coll=false

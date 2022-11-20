@@ -9,6 +9,7 @@ var _bullet_parent:Node
 
 func _ready():
 	_bullet_parent = get_node("BulletParent")
+	PlayerInfo.set_player(_kb)
 
 func _process(delta):
 	handle_input()
