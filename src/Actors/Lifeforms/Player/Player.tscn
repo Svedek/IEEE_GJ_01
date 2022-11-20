@@ -11,11 +11,9 @@ height = 80.0
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
-player_bullet = ExtResource( 3 )
-drag = 0.995
-angular_drag = 0.975
-turn_speed = 0.002
-move_speed = 6.0
+_health = 6
+_slow = 0.5
+_player_bullet = ExtResource( 3 )
 
 [node name="Firepoint" type="Node2D" parent="."]
 position = Vector2( 56, 0 )

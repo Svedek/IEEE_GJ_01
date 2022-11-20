@@ -1,11 +1,11 @@
 extends "res://src/Actors/Lifeforms/Lifeform.gd"
 
-export var player_bullet:PackedScene
+export var _player_bullet:PackedScene
 
-export var drag:float = 0.1
-export var angular_drag:float = 0.1
-export var turn_speed:float = 1
-export var move_speed:float = 10
+export var _drag:float = 0.995
+export var _angular_drag:float = 0.975
+export var _turn_speed:float = 0.002
+export var _move_speed:float = 6
 
 var _velocity:Vector2 = Vector2.ZERO
 var _angular_velocity:float
@@ -36,12 +36,12 @@ func handle_input():
 	var move = Input.get_action_strength("move_forward")
 	var turn_dir = Input.get_axis("turn_left","turn_right")
 	
-	_move_force = move * move_speed
-	_turn_force = turn_dir * turn_speed
+	_move_force = move * _move_speed
+	_turn_force = turn_dir * _turn_speed
 	
 func handle_movement():
-	_angular_velocity *= angular_drag
-	_velocity *= drag
+	_angular_velocity *= _angular_drag
+	_velocity *= _drag
 	
 	_angular_velocity += _turn_force
 	var move_vector = Vector2(_move_force*cos(rotation), _move_force*sin(rotation))
@@ -49,15 +49,12 @@ func handle_movement():
 	rotate(_angular_velocity)
 	_velocity = _kb.move_and_slide(_velocity+move_vector)
 	
-	#collision
-	for index in _kb.get_slide_count():
-		var collision := _kb.get_slide_collision(index)
-		var body := collision.collider
-		print("Collided with: ", body.name)
-		body.queue_free()
-	
 func shoot():
-	var bullet = player_bullet.instance()
+	var bullet = _player_bullet.instance()
 	bullet.global_position = _firepoint.global_position
 	_bullet_parent.add_child(bullet)
 	bullet.initialize(global_rotation,_velocity)
+
+func take_damage(damage:int,slow:float) -> void:
+	.take_damage(damage, slow)
+	_velocity *= slow
