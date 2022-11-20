@@ -18,6 +18,9 @@ func deal_damage(n:Node) -> bool:
 	return false
 		
 func die() -> void:
+	disable_col()
+	queue_free()
+
+func disable_col() -> void:
 	self.set_collision_layer(0)
 	self.set_collision_mask(0)
-	queue_free()

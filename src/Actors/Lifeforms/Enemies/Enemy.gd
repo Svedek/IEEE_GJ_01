@@ -9,11 +9,8 @@ func ready() ->  void:
 	rand.randomize()
 
 func die() -> void:
-	RandomNumberGenerator
+	disable_col()
 	for i in _money:
 		var spawn_vect = Vector2(rand.randf_range(-1.0,1.0), rand.randf_range(-1.0,1.0)) * 16
 		# TODO SPAWN MONEY
-
-
-func move_to_point():
-	pass
+	queue_free()

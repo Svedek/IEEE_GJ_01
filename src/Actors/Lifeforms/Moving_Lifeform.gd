@@ -15,14 +15,14 @@ var _turn_force:float
 
 
 func _physics_process(delta):
-	handle_movement() # possibly make use delta
+	_handle_movement() # possibly make use delta
 
 func set_move_intent(move:float, turn_dir:float):
 	_move_force = move * _move_speed
 	_turn_force = turn_dir * _turn_speed
 	
 # Assumes _move_force and _turn_force have already been set
-func handle_movement():
+func _handle_movement():
 	_angular_velocity *= _angular_drag
 	_velocity *= _drag
 	

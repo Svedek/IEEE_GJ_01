@@ -1,5 +1,6 @@
 extends "res://src/Actors/Lifeforms/Moving_Lifeform.gd"
 
+
 export var _player_bullet:PackedScene
 
 onready var _firepoint:Node2D = $"Firepoint"
@@ -12,21 +13,15 @@ func _ready():
 func _process(delta):
 	handle_input()
 
-#func _physics_process(delta):
-#	handle_movement() # TODO MAKE USE DELTA
-
 func _input(event):
 	if event.is_action_pressed("shoot"):
 		shoot()
-
-
 
 func handle_input():
 	var move = Input.get_action_strength("move_forward")
 	var turn_dir = Input.get_axis("turn_left","turn_right")
 	
 	set_move_intent(move,turn_dir)
-	
 	
 func shoot():
 	var bullet = _player_bullet.instance()
