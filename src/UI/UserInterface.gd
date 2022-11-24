@@ -1,15 +1,18 @@
 extends CanvasLayer
 
 
+
+export(Array, Resource) var _health_sprites:Array
+
 var _game_time:float
 
-var _timer:Label
+onready var _timer:Label = $"Timer"
+onready var _health_display:Array = [$"MarginContainer/Health/Health_0",$"MarginContainer/Health/Health_1",$"MarginContainer/Health/Health_2",$"MarginContainer/Health/Health_3",$"MarginContainer/Health/Health_4"]
 
 func _ready():
-	_timer = get_node("Timer")
-	
 	#	PlayerInfo.get_player().connect("change_health", self, "_update_health")
-
+	pass
+	
 func _process(delta):
 	_update_timer(delta)
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Sprites/Lifeforms/player.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Lifeforms/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Bullets/Player_Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Lifeforms/Player/Player_Camera.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.0
@@ -31,5 +32,6 @@ shape = SubResource( 1 )
 current = true
 zoom = Vector2( 1.4, 1.4 )
 smoothing_enabled = true
+script = ExtResource( 4 )
 
 [node name="BulletParent" type="Node" parent="."]
