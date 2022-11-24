@@ -31,3 +31,8 @@ func target_player():
 	#	print("move_intent: " + str(move_intent))
 	
 	set_move_intent(move_intent, turn_intent)
+
+
+func _on_body_entered(body):
+	if deal_damage(body):
+		take_damage(1,1) # Deal damage to self as well on collision

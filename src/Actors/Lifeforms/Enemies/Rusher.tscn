@@ -21,3 +21,5 @@ polygon = PoolVector2Array( 28, 0, 4, -28, -24, -28, -24, 28, 4, 28 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PoolVector2Array( 28, 0, 4, -28, -24, -28, -24, 28, 4, 28 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

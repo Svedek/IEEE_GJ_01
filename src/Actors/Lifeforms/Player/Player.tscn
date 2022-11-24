@@ -29,6 +29,7 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 1.4, 1.4 )
 smoothing_enabled = true
 
 [node name="BulletParent" type="Node" parent="."]
