@@ -10,14 +10,6 @@ var _containers:Array
 func _ready():
 	_ensureContainers(3)
 
-var i:int = 1
-func _process(delta):
-	i+=1
-	i = i%69
-	if (i % 10 == 0):
-		updateHealth(i/10, 6)
-
-
 func updateHealth(current:int, cap:int) -> void:
 	_ensureContainers(cap)
 	for c in _containers:
