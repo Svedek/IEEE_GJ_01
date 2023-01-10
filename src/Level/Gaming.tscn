@@ -4,12 +4,12 @@
 [ext_resource path="res://src/Actors/Lifeforms/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Level/Border.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/UserInterface.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Actors/Lifeforms/Enemies/Asteroid.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Actors/Lifeforms/Enemies/Rusher.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Mechanics/GameTime.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Spawning/HostilesManager.tscn" type="PackedScene" id=6]
 
 [node name="MainScreen" type="Node2D"]
 
-[node name="Space" type="TextureRect" parent="."]
+[node name="SpaceBG" type="TextureRect" parent="."]
 margin_left = -2500.0
 margin_top = -1800.0
 margin_right = 2500.0
@@ -46,43 +46,13 @@ limit_top = -1800
 limit_right = 2500
 limit_bottom = 1800
 
-[node name="Asteroid" parent="." instance=ExtResource( 5 )]
-position = Vector2( 630, -262 )
+[node name="HostilesManager" parent="." instance=ExtResource( 6 )]
 
-[node name="Asteroid2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1015, -269 )
-
-[node name="Asteroid3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 835, -7 )
-
-[node name="Asteroid4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1207, -8 )
-
-[node name="Asteroid5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1382, -266 )
-
-[node name="Asteroid6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1219, -528 )
-
-[node name="Asteroid7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 824, -532 )
-
-[node name="EnemyRusher" parent="." instance=ExtResource( 6 )]
-position = Vector2( 143, -205 )
-
-[node name="EnemyRusher2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -411, -73 )
-
-[node name="EnemyRusher3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 172, 251 )
-
-[node name="EnemyRusher4" parent="." instance=ExtResource( 6 )]
-position = Vector2( -260, 228 )
-
-[node name="EnemyRusher5" parent="." instance=ExtResource( 6 )]
-position = Vector2( -252, -251 )
+[node name="GameTime" parent="." instance=ExtResource( 5 )]
 
 [connection signal="health_update" from="Player" to="UserInterface" method="_on_Player_health_update"]
 [connection signal="money_update" from="Player" to="UserInterface" method="_on_Player_money_update"]
+[connection signal="GameTime" from="GameTime" to="UserInterface" method="_on_GameTime_GameTime"]
+[connection signal="GameTime" from="GameTime" to="HostilesManager" method="_on_GameTime_GameTime"]
 
 [editable path="Player"]
