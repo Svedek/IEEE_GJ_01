@@ -1,19 +1,33 @@
 extends Node2D
 
 
-onready var _spawners:Dictionary = {0:$AsteroidSpawner, 1:$RusherSpawner, 2:$RusherSpawner, 3:$RusherSpawner}
+onready var _spawners:Array = [$AsteroidSpawner, $RusherSpawner, $ShooterSpawner, $RusherSpawner]
 
-# spawn_index : [time_to_spawn, num_to_spawn, entity_id (in _spawners)]
-var _spawn_order:Dictionary = {
-	0:[3.0, 2, 1],
-	1:[10.0, 4, 1],
-	2:[17.0, 5, 1],
-	3:[24.0, 6, 1],
-	4:[24.0, 3, 0],
-	5:[30.0, 6, 1],
+# [time_to_spawn, num_to_spawn, entity_id (in _spawners)]
+var _spawn_order:Array = [
+	[3.0, 3, 1],
+	[10.0, 5, 1],
+	[17.0, 6, 1],
+	[24.0, 7, 1],
+	[24.0, 3, 0],
+	[30.0, 7, 1],
 	
-	6:[999.0, 5, 1],
-}
+	[42.0, 6, 1],
+	[42.0, 2, 2],
+	[48.0, 5, 0],
+	[48.0, 7, 1],
+	[48.0, 3, 2],
+	[56.0, 7, 1],
+	[56.0, 3, 2],
+	
+	[56.0, 5, 0],
+	[60.0, 7, 1],
+	[60.0, 3, 2],
+	
+	[75.0, 64, 1],
+	
+	[999.0, 5, 1],
+]
 
 var _next_spawn_index:int = 0
 

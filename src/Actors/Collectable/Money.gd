@@ -1,4 +1,4 @@
-extends "res://src/Actors/Collectable.gd"
+extends "res://src/Actors/Collectable/Collectable.gd"
 
 
 func _ready():

@@ -2,7 +2,7 @@ extends CollisionObject2D
 
 
 export var _health:int = 1
-export var _damage:int = 1
+export var _contact_damage:int = 1
 export var _slow:float = 1.0 # 1.0 is no slow, 0.0 is stop entirely; velocity *= slow 
 
 
@@ -13,7 +13,7 @@ func take_damage(damage:int, slow:float) -> void:
 		
 func deal_damage(n:Node) -> bool:
 	if (n.has_method("take_damage")):
-		n.take_damage(_damage,_slow)
+		n.take_damage(_contact_damage,_slow)
 		return true
 	return false
 		

@@ -28,17 +28,6 @@ rect_pivot_offset = Vector2( -1875, -339 )
 theme = SubResource( 2 )
 text = "Time: %s"
 
-[node name="Timer2" type="Label" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -150.0
-margin_top = 56.0
-margin_right = 1.0
-margin_bottom = 85.0
-rect_pivot_offset = Vector2( -1875, -339 )
-theme = SubResource( 2 )
-text = "Time: %s"
-
 [node name="HullUI" parent="." instance=ExtResource( 6 )]
 margin_left = 20.0
 margin_top = 20.0

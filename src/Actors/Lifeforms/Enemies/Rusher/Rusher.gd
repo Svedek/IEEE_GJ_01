@@ -3,9 +3,9 @@ extends "res://src/Actors/Lifeforms/Enemies/Enemy.gd"
 
 
 func _process(delta):
-	target_player()
+	handle_action()
 
-func target_player():
+func handle_action():
 	# Get radians to turn to be pointing at the player (-2PI <= turn_dir <= 2PI)
 	var to_player:Vector2 = PlayerInfo.get_player_position() - _kb.global_position
 	var turn_dir:float = to_player.angle() - _kb.global_rotation
@@ -17,7 +17,7 @@ func target_player():
 	# Find turn intensity
 	var turn_intent:float = turn_dir / PI
 	var move_intent:float = (1 - abs(turn_intent))
-	move_intent *= move_intent
+	move_intent *= move_intent # Square this to make the differance more drastic, test without
 	
 	set_move_intent(move_intent, turn_intent)
 
